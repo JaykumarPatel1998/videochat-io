@@ -2,6 +2,10 @@
   <main>
     <div v-if="user" id="checkIn">
       <h1>Check in any room, provided you have host and room info</h1>
+      <input type="text" v-model="url" placeholder="paste url here " />
+      <button @click="parseurl">
+        parse url
+      </button>
       <p>
         <input
           type="text"
@@ -41,6 +45,7 @@ export default {
       roomId: null,
       displayName: null,
       roomName: null,
+      url: null
     };
   },
   methods: {
@@ -65,6 +70,11 @@ export default {
         else this.$router.replace("/");
       });
     },
+    parseurl: function() {
+      const splitArray = this.url.split('/')
+      this.roomId = splitArray[splitArray.length - 1]
+      this.hostId = splitArray[splitArray.length - 2]
+    }
   },
   mounted() {
     onAuthStateChanged(auth, (userInfo) => {

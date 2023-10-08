@@ -6,6 +6,9 @@
       <p>
         Welcome back <span>{{ user.displayName }}</span>
       </p>
+      <p>
+        Author : <span>Jaykumar Patel</span>
+      </p>
       <button>
         <router-link to="/rooms">Join a room</router-link>
       </button>
