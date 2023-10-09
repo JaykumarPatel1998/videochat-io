@@ -1,7 +1,11 @@
 # videoconnect.io
 ## WebRTC-Firebase Video Chat
 
+Access the site at - https://master.dkj18q6zs1m0c.amplifyapp.com/
+
 author: Jaykumar Patel
+![Alt text](<image.jpeg>)
+
 
 This project is a real-time video chat application built using WebRTC and Firebase.
 Vue 3 was used a client side javascript framework to create a single page application
